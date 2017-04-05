@@ -89,7 +89,7 @@ module.exports = {
 	complete (data, {logger, chalk, files}) {
 		// Convert the name to SnakeCase
 		let name = data.name
-		let CapitalizedName = data.name.charAt(0).toUpperCase() + data.name.slice(1)
+		let CapitalizedName = name.charAt(0).toUpperCase() + name.slice(1)
 
 		// Default Directory
 		let destDirName = `./`
