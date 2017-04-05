@@ -1,0 +1,1 @@
+export { default as {{capitalize name}} } from './{{name}}'
