@@ -104,13 +104,12 @@ module.exports = {
 		Object.keys(files).forEach((key) => {
 			// Search for the files with "component"
 			let pos = key.search("views/component/component")
-			logger.log(pos)
 
 			// If the file has component in the name
 			if (pos != -1) {
 				// Get the extension
 				let ext = key.substr(25, (key.length - 1))
-				logger.log(ext)
+
 				// Unless its ".vue" file rename it to the component name
 				fs.rename(`${destDirName}/views/component/component${ext}`, `${destDirName}/views/component/${CapitalizedName}${ext}`, (err) => {})
 			}
